@@ -59,3 +59,6 @@ gem 'simple_form'
 gem 'twilio-ruby'
 
 gem 'whenever'
+
+gem 'jquery-ui-rails'
+
