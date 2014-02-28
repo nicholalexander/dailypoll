@@ -1,0 +1,9 @@
+.questionform
+	= simple_form_for :question, url: administrator_questions_path do |f|
+		= f.input :text, placeholder: "enter your question"
+		= f.input :date
+		= f.button :submit, "Add Question to Queue"
+
+	- @questions.each do |x|
+		%p= x.text
+		%p= x.date
