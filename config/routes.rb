@@ -8,6 +8,7 @@ Dailypoll::Application.routes.draw do
     post 'adminlogin', to: 'sessions#create'
 
     resources :users
+    resources :questions
   end
 
   resources :users
