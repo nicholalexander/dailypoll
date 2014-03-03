@@ -18,3 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :output, "#{path}/log/cron.log"
+	every 1.minutes do 
+		command 'echo "hello11"'
+	end
