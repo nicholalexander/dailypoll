@@ -3,11 +3,6 @@ class User < ActiveRecord::Base
 	has_many :votes
 	validates :name, :email, presence: true
 	validates :phone, uniqueness: true, presence: true
-	validates :phone, format: { with: /\d{3}-\d{3}-\d{4}/, message: "try again" }
-
-
-
-	def self.test
-		puts "no"
-	end
+	validates :phone, format: { with: /\d{10}/, message: "Phone not valid" }
 end
+
