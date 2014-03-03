@@ -18,7 +18,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :environment, 'development'
 set :output, "#{path}/log/cron.log"
-	every 1.minutes do 
-		command 'echo "hello11"'
+	every 1.minutes do
+		command 'echo "schedule.rb running"'
+		runner "Sms.new.initiate_delayed_jobs"
 	end
