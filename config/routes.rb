@@ -12,6 +12,7 @@ Dailypoll::Application.routes.draw do
   end
 
   post 'gettext', to: 'receivetext#receive_text'
+  post 'getvoice', to: 'receivetext#voice_response'
   resources :users
   resources :questions
   root "home#index"
