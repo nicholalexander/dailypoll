@@ -21,4 +21,5 @@
 set :output, "#{path}/log/cron.log"
 	every 1.minutes do 
 		command 'echo "hello11"'
+		runner "User.test"
 	end
