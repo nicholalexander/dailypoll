@@ -16,6 +16,8 @@ class QuestionsController < ApplicationController
 				@no_votes += 1
 			end
 		end
+		gon.yes_votes = @yes_votes
+		gon.no_votes = @no_votes
 	end
 
 
