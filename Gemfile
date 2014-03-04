@@ -62,3 +62,7 @@ gem 'whenever'
 
 gem 'jquery-ui-rails'
 
+gem 'chart-js-rails'
+
+gem 'gon'
+
