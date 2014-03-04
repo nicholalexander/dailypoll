@@ -18,7 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-set :environment, 'production'
+env :PATH, ENV['PATH']
 set :output, "#{path}/log/cron.log"
 	every 1.minutes do
 		command 'echo "schedule.rb running"'
