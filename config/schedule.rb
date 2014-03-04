@@ -20,7 +20,8 @@
 # Learn more: http://github.com/javan/whenever
 env :PATH, ENV['PATH']
 set :output, "#{path}/log/cron.log"
-	every 1.days do
+	every 1.days, :at => '11:00 am' do
 		command 'echo "schedule.rb running"'
 		runner "Sms.new.initiate_delayed_jobs"
 	end
+

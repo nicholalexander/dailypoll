@@ -32,7 +32,7 @@ class Sms
   	@twilio_client.account.sms.messages.create(
     	:from => "+1#{twilio_phone_number}",
     	:to => phone_number,
-    	:body => "#{text}."
+    	:body => "#{text}"
   		)
 	end
 
