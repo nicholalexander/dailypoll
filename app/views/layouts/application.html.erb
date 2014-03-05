@@ -9,7 +9,10 @@
 </head>
 <body>
 <%= flash[:notice] || flash.alert %>
+<div class='main'>
+	<%= render 'shared/header' %>
 <%= yield %>
-
+	<%= render 'shared/footer' %>
+</div>
 </body>
 </html>
