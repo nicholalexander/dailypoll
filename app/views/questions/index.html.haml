@@ -1,0 +1,4 @@
+- @questions.each do |question|
+	= question.text
+	= question.id
+	%canvas{:class => 'chart-canvas', :id => "#{question.id}", :width => '400', :height => '400'}
