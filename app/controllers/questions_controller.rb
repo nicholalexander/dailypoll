@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
 	respond_to :html, :js, :json
 
 	def index
-		@questions = Question.all
+		@questions = Question.where(['date < ?', Time.now])
 		yes_votes = 0
 		no_votes = 0
 		@question_hash = {}
@@ -27,17 +27,18 @@ class QuestionsController < ApplicationController
 
 	def show
 		@question = Question.find(params[:id])
-		@yes_votes = 0
-		@no_votes = 0
+		@question_hash = {}
+		yes_votes = 0
+		no_votes = 0
 		@question.votes.each do |vote|
 			if vote.vote == 1
-				@yes_votes += 1
+				yes_votes += 1
 			else
-				@no_votes += 1
+				no_votes += 1
 			end
 		end
-		gon.yes_votes = @yes_votes
-		gon.no_votes = @no_votes
+		@question_hash[@question.id] = {yes: yes_votes, no: no_votes}
+		gon.question_hash = @question_hash
 	end
 
 
