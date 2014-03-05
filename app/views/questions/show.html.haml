@@ -1,2 +1,8 @@
-%h1 hi
-%canvas{:class => 'chart-canvas', :id => "#{@question.id}", :width => '450', :height => '600'}
+.titlebox
+.titletext
+	CHECK THE 
+	%span
+		RESULTS
+
+.resultsbox		
+	%canvas{:class => 'chart-canvas', :id => "#{@question.id}", :width => '400', :height => '400'}
