@@ -3,10 +3,16 @@
   .icons
     %ul#face
       %li
-        .logout_image
-          =image_tag 'logout.png'
-        .logout_text
-          Logout Account
+        - if current_user
+          .logout_image
+            =link_to image_tag('logout.png'), session_path(current_user.id), :method => 'delete'
+          .logout_text
+            Logout Account
+        - else
+          .logout_image
+          = link_to image_tag('logout.png'), new_session_path
+          .logout_text
+            Login
       %li
         .pie_image
           =image_tag 'pie.png'
