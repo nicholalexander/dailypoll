@@ -41,8 +41,6 @@ GEM
     capistrano-rails (1.1.1)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
-    chart-js-rails (0.0.6)
-      railties (> 3.1)
     chronic (0.10.2)
     coderay (1.1.0)
     coffee-rails (4.0.1)
@@ -175,7 +173,6 @@ DEPENDENCIES
   capistrano
   capistrano-bundler
   capistrano-rails
-  chart-js-rails
   coffee-rails (~> 4.0.0)
   debugger
   gon
