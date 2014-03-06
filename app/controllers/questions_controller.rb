@@ -39,6 +39,13 @@ class QuestionsController < ApplicationController
 		end
 		@question_hash[@question.id] = {yes: yes_votes, no: no_votes}
 		gon.question_hash = @question_hash
+
+		respond_to do |format|
+			format.html
+			format.js
+		end
+
+
 	end
 
 
