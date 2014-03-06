@@ -1,9 +1,17 @@
-.questionform
-	= simple_form_for :question, url: administrator_questions_path do |f|
-		= f.input :text, placeholder: "enter your question"
-		= f.input :date
-		= f.button :submit, "Add Question to Queue"
-
-	- @questions.each do |x|
-		%p= x.text
-		%p= x.date
+.adminbackground
+	.addquestionbox
+		= simple_form_for :question, url: administrator_questions_path do |f|
+			= f.input :text, placeholder: "enter your question", label: false
+			= f.input :date, label: false, placeholder: 'click here to select date'
+			= f.button :submit, "Add Question to Queue"
+	.admindisplayquestion
+		- @questions.each do |x|
+			%ul
+				.adminquestiontext
+					%p= x.text
+				.adminlinkdelete
+					= link_to 'delete', administrator_question_path(x.id), method: 'delete'
+				.adminlinkedit
+					= link_to 'edit', edit_administrator_question_path(x.id)
+				.adminquestiondate
+					%p= x.date

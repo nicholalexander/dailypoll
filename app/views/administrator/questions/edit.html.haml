@@ -1,0 +1,6 @@
+.adminbackground
+	.addquestionbox
+		= simple_form_for :question, url: administrator_question_path(params[:id]), method: 'patch' do |f|
+			= f.input :text, placeholder: "enter your question", label: false
+			= f.input :date, label: false, placeholder: 'click here to select date'
+			= f.button :submit, "Update Question"

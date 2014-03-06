@@ -1,6 +1,4 @@
 window.onload = function() {
-	console.log(gon.question_hash)
-	console.log("yes")
 
 
 	var hash_keys = Object.keys(gon.question_hash)
@@ -18,7 +16,7 @@ window.onload = function() {
 					},
 					{
 						value: gon.question_hash[hash_keys[i]].no,
-						color: "#E2EAE9",
+						color: "#323131",
 						label: 'no'
 					}];
 		index_charts = new Chart(ctx).Doughnut(data);

@@ -60,7 +60,9 @@ gem 'twilio-ruby'
 
 gem 'whenever'
 
-gem 'jquery-ui-rails'
+# gem 'jquery-ui-rails'
 
 gem 'gon'
+
+gem 'jquery-ui-sass-rails'
 
