@@ -1,22 +1,23 @@
-.dialogue
-  %p DAILY POLL STRAIGHT TO YOUR PHONE.
-  = simple_form_for :user, url: users_path do |f|
-    = f.input :name, label: false, placeholder: "Name"
-    = f.input :phone, label: false, placeholder: "format: 0000000000"
-    = f.input :email, label: false, placeholder: 'Email Address'
-    = f.input :password, label: false, placeholder: 'Password'
-    = f.input :password_confirmation, label: false, placeholder: 'Password Confirmation'
-    = f.button :submit, "Sign up!"
-.features
-  .yellow
-    .iphone
-      =image_tag 'gear.png'
-      .iphonetext
+.background
+  .dialogue
+    %p DAILY POLL STRAIGHT TO YOUR PHONE.
+    = simple_form_for :user, url: users_path do |f|
+      = f.input :name, label: false, placeholder: "Name"
+      = f.input :phone, label: false, placeholder: "format: 0000000000"
+      = f.input :email, label: false, placeholder: 'Email Address'
+      = f.input :password, label: false, placeholder: 'Password'
+      = f.input :password_confirmation, label: false, placeholder: 'Password Confirmation'
+      = f.button :submit, "Sign up!"
+  .features
+    .yellow
+      .iphone
+        =image_tag 'gear.png'
+        .iphonetext
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla fringilla.
+      .android
+        =image_tag 'star.png'
         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla fringilla.
-    .android
-      =image_tag 'star.png'
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla fringilla.
-    .web
-      =image_tag 'earth.png'
-      .webtext
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla fringilla.
+      .web
+        =image_tag 'earth.png'
+        .webtext
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla fringilla.

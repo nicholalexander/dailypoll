@@ -1,5 +1,6 @@
-.signinbox
-	= simple_form_for :login, {url: sessions_path } do |f|
-		= f.input :email, label: false, placeholder: 'email address'
-		= f.input :password, label: false, placeholder: 'password'
-		= f.button :submit, "Login", :class => 'signupbutton'
+.background	
+	.signinbox
+		= simple_form_for :login, {url: sessions_path } do |f|
+			= f.input :email, label: false, placeholder: 'email address'
+			= f.input :password, label: false, placeholder: 'password'
+			= f.button :submit, "Login", :class => 'signupbutton'

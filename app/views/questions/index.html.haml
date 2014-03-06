@@ -1,8 +1,9 @@
-.boxholder	
-	- @questions.each do |question|
-		.indexresultsbox
-			.indexresultstitle
-				= link_to question.text, question_path(question.id)
-			.indexcanvasbox
-				.indexdoughnuthole
-				%canvas{:class => 'indexchart-canvas', :id => "#{question.id}", :width => '300', :height => '300'}
+.indexbackground
+	.boxholder	
+		- @questions.each do |question|
+			.indexresultsbox
+				.indexresultstitle
+					= link_to question.text, question_path(question.id)
+				.indexcanvasbox
+					.indexdoughnuthole
+					%canvas{:class => 'indexchart-canvas', :id => "#{question.id}", :width => '300', :height => '300'}

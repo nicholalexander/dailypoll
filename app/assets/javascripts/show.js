@@ -13,7 +13,7 @@ window.onload = function() {
 		data = [
 					{
 						value: gon.question_hash[hash_keys[i]].yes,
-						color: "#F7464A",
+						color: "#FAFC37",
 						label: 'yes'
 					},
 					{

@@ -1,13 +1,13 @@
-
-.titlebox
-	.titletext
-		CHECK THE 
-		%span
-			RESULTS
-.resultsbox
-	.resultstitle
-		= @question.text
-	.canvasbox
-		.doughnuthole
-		%canvas{:class => 'chart-canvas', :id => "#{@question.id}", :width => '300', :height => '300'}
+.showbackground
+	.titlebox
+		.titletext
+			CHECK THE 
+			%span
+				RESULTS
+	.resultsbox
+		.resultstitle
+			= @question.text
+		.canvasbox
+			.doughnuthole
+			%canvas{:class => 'chart-canvas', :id => "#{@question.id}", :width => '300', :height => '300'}
 			
