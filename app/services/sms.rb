@@ -14,6 +14,7 @@ class Sms
 	def send_question(question)
 		users = User.all
 		text = question.text
+		text = text + " (Please answer Yes or No)"
 		users.each do |user|
 			phone_number = user.phone
 			send_text_message(phone_number, text)

@@ -1,11 +1,16 @@
 class ReceivetextController < ActionController::Base
 	def receive_text
+
 		phone = params["From"][2..-1]
 		user = User.find_by(phone: phone)
 		text = params["Body"]
 		
 		vote = Vote.new
 		vote.save_the_vote(user, text)
+
+		response_text = "Thanks for participating, your vote has been recorded."
+
+		Sms.new.send_text_message(phone, response_text)
 
 		render nothing:true
 	end
