@@ -2,6 +2,7 @@ window.onload = function() {
 	console.log(gon.question_hash)
 	console.log("yes")
 
+
 	var hash_keys = Object.keys(gon.question_hash)
 
 	var hash_length = hash_keys.length
@@ -22,5 +23,24 @@ window.onload = function() {
 					}];
 		index_charts = new Chart(ctx).Doughnut(data);
 	}
+
+	var size_li = $(".indexresultsbox").size();
+  var x=3;
+  $('.indexresultsbox:lt('+x+')').css({"display":"inline-block"});
+
+	$(window).scroll(function() {
+    if($(window).scrollTop() >= $(document).height() - ($(window).height()+0)){
+        x= (x+1 <= size_li) ? x+1 : size_li;
+      $('.indexresultsbox:lt('+x+')').fadeIn();
+      $('.indexresultsbox:lt('+x+')').css({"display":"inline-block"})
+    
+      if (x >= size_li){
+        $(this).hide();
+
+      }
+
+      return false;
+    }
+});
 
 }

@@ -1,5 +1,5 @@
-.adminlogin
-	= simple_form_for :login, :html => { autocomplete: "off" }, url: administrator_adminlogin_path do |f|
-		= f.input :email, label: "Enter your email", :autofocus => true
-		= f.input :password, label: "Enter your password"
+.signinbox
+	= simple_form_for :login, :html => { autocomplete: "off" }, url: administrator_sessions_path do |f|
+		= f.input :email, placeholder: "Enter your email", label: false, :autofocus => true
+		= f.input :password, placeholder: "Enter your password", label: false
 		= f.button :submit, "Login"

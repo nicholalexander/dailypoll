@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
 	respond_to :html, :js, :json
+	before_filter :authorize_user
 
 	def index
 		@questions = Question.where(['date < ?', Time.now])
