@@ -1,4 +1,7 @@
 - @questions.each do |question|
-	= question.text
-	= question.id
-	%canvas{:class => 'chart-canvas', :id => "#{question.id}", :width => '400', :height => '400'}
+	.indexresultsbox
+		.indexresultstitle
+			= question.text
+		.indexcanvasbox
+			.indexdoughnuthole
+			%canvas{:class => 'indexchart-canvas', :id => "#{question.id}", :width => '300', :height => '300'}
